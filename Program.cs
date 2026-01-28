@@ -1,0 +1,38 @@
+﻿
+/*
+10464
+1500
+20
+
+55555.67
+3017
+5.03
+
+
+
+
+*/
+
+
+
+double recordTime = double.Parse(Console.ReadLine());
+double distanceMetres  = double.Parse(Console.ReadLine());
+double secondPerMetre  = double.Parse(Console.ReadLine());
+
+double recordTimeGoal = distanceMetres * secondPerMetre;
+double resistance = Math.Floor(distanceMetres / 15);
+double resistanceSlow = resistance * 12.5;
+
+double totalTime = recordTimeGoal + resistanceSlow;
+
+
+
+if (totalTime < recordTime)
+{
+    Console.WriteLine($"Yes, he succeeded! The new world record is {totalTime:F2} seconds.");
+}
+
+else if (totalTime >= recordTime )
+{
+    Console.WriteLine($"No, he failed! He was {totalTime - recordTime:F2} seconds slower.");
+}
