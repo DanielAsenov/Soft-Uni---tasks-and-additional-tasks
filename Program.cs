@@ -1,0 +1,9 @@
+﻿
+
+
+double radius = double.Parse(Console.ReadLine());
+
+double area = Math.PI * (radius * radius);
+double areaPerimeter = 2 * Math.PI * radius;
+Console.WriteLine($"{area:F2}");
+Console.WriteLine($"{areaPerimeter:F2}");
