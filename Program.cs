@@ -3,17 +3,15 @@
 
 
 
+int number = int.Parse(Console.ReadLine());
 
+bool numberIsEven = number % 2 == 0;
 
-int number1 = int.Parse(Console.ReadLine());
-int number2 = int.Parse(Console.ReadLine());
-
-if (number1 > number2)
+if (numberIsEven)
 {
-    Console.WriteLine(number1);
-    
+    Console.WriteLine("even");
 }
 else
 {
-    Console.WriteLine(number2);
+    Console.WriteLine("odd");
 }
