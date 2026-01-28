@@ -1,0 +1,23 @@
+﻿
+
+
+
+
+
+
+
+
+int pencils = int.Parse(Console.ReadLine());
+int markers  = int.Parse(Console.ReadLine());
+int litres  = int.Parse(Console.ReadLine());
+int discount  = int.Parse(Console.ReadLine());
+
+double pencilsPrice = pencils * 5.80;
+double makersPrice = markers * 7.20;
+double litresPrice = litres * 1.20;
+
+double sum = pencilsPrice + makersPrice + litresPrice;
+
+double discountSum = sum - (sum * discount / 100);
+
+Console.WriteLine(discountSum);
