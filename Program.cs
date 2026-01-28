@@ -1,0 +1,48 @@
+﻿
+/*
+ 
+2
+10
+1
+1
+1200
+
+5
+10
+2.1
+0.8
+321
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ */
+int daysGone = int.Parse(Console.ReadLine());
+int foodGiven = int.Parse(Console.ReadLine());
+double dogFoodPerDay = double.Parse(Console.ReadLine());
+double catFoodPerDay = double.Parse(Console.ReadLine());
+double turtleFoodPerDay = double.Parse(Console.ReadLine());
+
+
+double dogFoodEaten = dogFoodPerDay * daysGone;
+double catFoodEaten = catFoodPerDay * daysGone;
+double turtleFoodEaten = turtleFoodPerDay * daysGone / 1000;
+
+double foodEaten = dogFoodEaten + catFoodEaten + turtleFoodEaten;
+
+
+
+if (foodGiven >= foodEaten)
+{
+    Console.WriteLine($"{Math.Floor(foodGiven - foodEaten)} kilos of food left.");
+}
+
+else
+{
+    Console.WriteLine($"{Math.Ceiling(foodEaten - foodGiven)} more kilos of food are needed.");
+}
