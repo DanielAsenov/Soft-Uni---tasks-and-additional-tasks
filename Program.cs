@@ -1,0 +1,42 @@
+﻿/*
+6
+10
+5.2
+
+10.25
+15.45
+8.88
+
+
+
+
+*/
+
+double heightHouse = double.Parse(Console.ReadLine());
+double widthSide = double.Parse(Console.ReadLine());
+double roofTriangleHeight = double.Parse(Console.ReadLine());
+
+
+double widthSideArea = heightHouse * widthSide;
+double windowSideArea = 1.5 * 1.5;
+double sideAreaTotal = 2 * widthSideArea - 2 * 2.25;
+
+double frontAndBackArea = heightHouse * heightHouse;
+double frontAndBackDoor = 1.2 * 2;
+double frontAndBackTotal = frontAndBackArea * 2 - frontAndBackDoor;
+double totalAreaHouse = sideAreaTotal + frontAndBackTotal;
+
+double greenPaintNeeded = totalAreaHouse / 3.4;
+
+
+// roof
+
+
+double roofRecntagleAreaTotal = 2 * (heightHouse * widthSide);
+double roofTriangleAreaTotal = 2 * (heightHouse * roofTriangleHeight / 2);
+double roofTotalArea = roofRecntagleAreaTotal + roofTriangleAreaTotal;
+
+double redPaintNeeded = roofTotalArea / 4.3;
+
+Console.WriteLine($"{greenPaintNeeded:F2}");
+Console.WriteLine($"{redPaintNeeded:F2}");
