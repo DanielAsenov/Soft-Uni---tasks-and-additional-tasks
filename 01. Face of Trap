@@ -1,0 +1,19 @@
+﻿
+
+
+
+
+
+
+
+
+
+double b1 = double.Parse(Console.ReadLine());
+double b2  = double.Parse(Console.ReadLine());
+double h  = double.Parse(Console.ReadLine());
+
+
+double face = b1 + b2;
+double face1 = face * (h / 2.00);
+
+Console.WriteLine ($"{face1:F2}");
