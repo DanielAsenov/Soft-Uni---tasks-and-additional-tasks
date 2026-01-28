@@ -1,0 +1,34 @@
+﻿
+
+/*
+
+Game of Thrones
+60
+96
+
+Teen Wolf
+48
+60
+
+*/
+
+string tvShow = Console.ReadLine();
+int episodeTime = int.Parse(Console.ReadLine());
+double breakTime = int.Parse(Console.ReadLine());
+
+double lunchTime = breakTime / 8;
+double relaxTime = breakTime / 4;
+
+double timeLeft = breakTime - lunchTime - relaxTime;
+
+
+if (timeLeft >= episodeTime)
+{
+    Console.WriteLine($"You have enough time to watch {tvShow} and left with {Math.Ceiling(timeLeft - episodeTime)} minutes free time.");
+}
+
+else if (timeLeft < episodeTime)
+
+{
+    Console.WriteLine($"You don't have enough time to watch {tvShow}, you need {Math.Ceiling(episodeTime - timeLeft)} more minutes.");
+}
