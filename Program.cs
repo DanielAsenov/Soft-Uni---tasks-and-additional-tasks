@@ -1,48 +1,56 @@
 ﻿
 
+/*
+
+15437.62
+186
+57.99
+
+20000
+120
+55.5
 
 
-using System.Text.Json;
+9587.88
+222
+55.68
 
-double priceVacation = double.Parse(Console.ReadLine());
-int puzzles = int.Parse(Console.ReadLine());
-int dolls = int.Parse(Console.ReadLine());
-int teddyBears = int.Parse(Console.ReadLine());
-int minions = int.Parse(Console.ReadLine());
-int toyTrucks = int.Parse(Console.ReadLine());
 
-double puzzlesPrice = puzzles * 2.60;
-double dollsPrice = dolls * 3;
-double teddyBearsPrice = teddyBears * 4.10;
-double minionsPrice = minions * 8.20;
-double toyTrucksPrice = toyTrucks * 2;
+*/
 
-double discount = 0;
-double rent = 0;
-double moneyLeft = 0;
 
-double priceToys = puzzlesPrice + dollsPrice + teddyBearsPrice + minionsPrice + toyTrucksPrice;
 
-double toysCount = puzzles + dolls + teddyBears + minions + toyTrucks;
 
-if (toysCount >= 50)
+
+double filmBudget = double.Parse(Console.ReadLine());
+int statistsCount = int.Parse(Console.ReadLine());
+double statistOutfitPrice = double.Parse(Console.ReadLine());
+
+
+double decorPrice = filmBudget * 0.1;
+double outfitPrice = statistsCount * statistOutfitPrice;
+double movieCost = 0;
+
+
+if (statistsCount > 150)
 {
-    discount = priceToys - (priceToys * 0.25);
-    rent = discount * 0.10;
-    moneyLeft = discount - rent;
-
+    outfitPrice = outfitPrice - (outfitPrice * 0.1);
+    movieCost = decorPrice + outfitPrice;
 }
-else if (toysCount < 50)
-{
-    moneyLeft = priceToys - (priceToys * 0.10);
 
+else if (statistsCount <= 150)
+{
+    movieCost = decorPrice + outfitPrice;
 }
 
-if (moneyLeft >= priceVacation)
+
+if (movieCost <= filmBudget)
 {
-    Console.WriteLine($"Yes! {moneyLeft - priceVacation:F2} lv left.");
+    Console.WriteLine("Action!");
+    Console.WriteLine($"Wingard starts filming with {filmBudget - movieCost:F2} leva left.");
 }
-else
+else if (movieCost > filmBudget)
 {
-    Console.WriteLine($"Not enough money! {priceVacation - moneyLeft:F2} lv needed.");
+    Console.WriteLine("Not enough money!");
+    Console.WriteLine($"Wingard needs {movieCost - filmBudget:F2} leva more.");
 }
