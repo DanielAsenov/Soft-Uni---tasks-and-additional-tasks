@@ -1,0 +1,14 @@
+﻿
+
+
+
+
+
+
+
+
+double celsius = double.Parse(Console.ReadLine());
+
+double farenHeit = (celsius * 1.8) + 32;
+
+Console.WriteLine($"{farenHeit:f2}");
