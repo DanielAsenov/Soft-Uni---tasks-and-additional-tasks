@@ -1,0 +1,20 @@
+﻿
+
+
+using System.ComponentModel.Design;
+double number = double.Parse(Console.ReadLine());
+
+
+
+
+while (number >= 0)
+{
+    number = number * 2;
+    Console.WriteLine($"Result: {number:F2}");
+    number = double.Parse(Console.ReadLine());
+
+}
+if  (number < 0)
+{
+    Console.WriteLine("Negative number!");
+}
